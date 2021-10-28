@@ -9,6 +9,7 @@ import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import AddService from './Pages/AddService/AddService';
 import ManageServices from './Pages/ManageServices/ManageServices';
+import UpdateUser from './Pages/UpdateUser/UpdateUser';
 
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/manageServices">
               <ManageServices></ManageServices>
+            </Route>
+            <Route path="/services/update/:id">
+              <UpdateUser></UpdateUser>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

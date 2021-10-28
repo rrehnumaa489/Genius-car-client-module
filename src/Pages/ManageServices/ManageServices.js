@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ManageServices = () => {
     const [services, setServices] = useState([]);
@@ -29,6 +30,7 @@ const ManageServices = () => {
             {
                 services.map(service => <div key={service._id}>
                     <h3>{service.name}</h3>
+                    <Link to={`/services/update/${service._id}`}><button>Update</button></Link>
                     <button onClick={ () => handleDelete(service._id) }>Delete</button>
                 </div>)
             }
